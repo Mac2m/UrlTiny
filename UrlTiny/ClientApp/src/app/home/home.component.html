@@ -1,0 +1,11 @@
+<h1>Url Tiny</h1>
+<p>
+    This is a simple application that allows you to shorten your URLs.
+</p>
+
+<label for="shortUrl">Short Url</label>
+<input type="text" id="shortUrl" placeholder="Enter your URL here" #shortUrlInput />
+<button (click)="onSubmit()">Submit</button>
+
+<span *ngIf="spanText" #spanElement ><a target="_blank" href="https://localhost:5001/api/home/urltiny/{{spanText}}">https://localhost:5001/api/home/urltiny/{{spanText}}</a></span>
+

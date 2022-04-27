@@ -1,0 +1,20 @@
+<h1 id="tableLabel">Urls</h1>
+
+<p>List of all tinys urls.</p>
+
+<p *ngIf="!urls"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="urls">
+  <thead>
+    <tr>
+      <th>Short Url</th>
+      <th>Long Url</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let url of urls">
+      <td>https://localhost:5001/api/home/urltiny/{{ url.shortUrl }}</td>
+      <td>{{ url.longUrl }}</td>
+    </tr>
+  </tbody>
+</table>
